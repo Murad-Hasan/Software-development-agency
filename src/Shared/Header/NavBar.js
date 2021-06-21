@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
 //   const [loggedInUser, setLoggedInUser] = useContext(UserContext)
   return (
-    <Navbar sticky="top" collapseOnSelect expand="md" className='shadow p-2 rounded'>
+    <Navbar sticky="top" collapseOnSelect expand="md" className='shadow p-3 rounded'>
       <div className="container">
         <Navbar.Brand href="/home">
           <h2 className='m-0 font-monospace border-1'>Softonic Solution</h2>
@@ -16,6 +16,7 @@ const NavBar = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto">
             <Nav.Link className='text-white' as={Link} to="/home">Home</Nav.Link>
+            <Nav.Link className='text-white' as={Link} to="/service">Services</Nav.Link>
             <Nav.Link className='text-white' as={Link} to="/aboutUs">About Us</Nav.Link>
             <Nav.Link className='text-white' as={Link} to="/contact">Contact </Nav.Link>
             <Nav.Link className='text-white' as={Link} to="/dashboard">Dashboard</Nav.Link>

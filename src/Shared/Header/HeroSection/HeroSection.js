@@ -1,6 +1,5 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import "./HeroSection.css";
 
 const HeroSection = () => {
   return (
@@ -10,7 +9,8 @@ const HeroSection = () => {
           <Col md={6} sm={12} className='my-auto'>
             <div>
                 <h1>
-                Easily Integrate chat to your website
+                Easily Integrate chat to <br />
+                your website
                 </h1>
                 <hr style={{width:'150px', color:'#FFF', padding:'2px'}}/>
                 <p className='text-white'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe aspernatur adipisci minus assumenda omnis, possimus beatae aliquam explicabo, recusandae veritatis earum repellendus, impedit.</p>
