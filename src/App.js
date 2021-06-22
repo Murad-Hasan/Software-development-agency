@@ -7,6 +7,9 @@ import NavBar from './Shared/Header/NavBar';
 import { createContext, useState } from 'react';
 import UserLogIn from './Pages/UserLogin/UserLogin';
 import Dashboard from './components/Dashboard/Dashboard';
+import PrivateRouter from './components/PrivateRouter/PrivateRouter';
+import Services from './components/Services/Services';
+import TakaYourBusiness from './components/TakaYourBusiness/TakaYourBusiness';
 
 export const UserContext = createContext();
 
@@ -23,9 +26,18 @@ function App() {
             <Route path='/login'>
               <UserLogIn/>
             </Route>
-            <Route path='/dashboard'>
-              <Dashboard/>
+            <Route path='/services'>
+              <Services/>
             </Route>
+            <Route path='/about'>
+              <TakaYourBusiness/>
+            </Route>
+            <Route path='/contact'>
+              <UserLogIn/>
+            </Route>
+            <PrivateRouter path='/dashboard'>
+              <Dashboard/>
+            </PrivateRouter>
           </Switch>
           <Footer/>
         </Router>

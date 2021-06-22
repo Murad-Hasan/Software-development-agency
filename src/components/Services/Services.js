@@ -51,7 +51,7 @@ const Services = () => {
                                                 </span>
                                                 <h3>{service.title}</h3>
                                                 <p>{service.description}</p>
-                                                <Link className='text-decoration-none' ><strong className='get-btn'> Get Service <BsFillReplyAllFill/></strong></Link> 
+                                                <Link to='/' className='text-decoration-none' ><strong className='get-btn'> Get Service <BsFillReplyAllFill/></strong></Link> 
                                             </div>
                                         </div>
                                     ))

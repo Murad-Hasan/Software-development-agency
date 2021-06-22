@@ -5,6 +5,7 @@ import { UserContext } from "../../App";
 
 const NavBar = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext)
+  console.log(loggedInUser);
   return (
     <Navbar sticky="top" collapseOnSelect expand="md" style={{background:'rgba(117, 174, 255,.9)'}} className='shadow p-3 rounded'>
       <div className="container">
@@ -16,10 +17,13 @@ const NavBar = () => {
           <Nav className="ms-auto">
             <Nav.Link className='text-white' as={Link} to="/">Home</Nav.Link>
             <Nav.Link className='text-white' as={Link} to="/services">Services</Nav.Link>
-            <Nav.Link className='text-white' as={Link} to="/aboutUs">About Us</Nav.Link>
+            <Nav.Link className='text-white' as={Link} to="/about">About Us</Nav.Link>
             <Nav.Link className='text-white' as={Link} to="/contact">Contact </Nav.Link>
             <Nav.Link className='text-white' as={Link} to="/dashboard">Dashboard</Nav.Link>
-            <Nav.Link className='text-white' as={Link} to="/login">Login</Nav.Link>
+            {
+              loggedInUser.email? <Nav.Link className='text-white' as={Link} to="/login">{loggedInUser.displayName || loggedInUser.email}</Nav.Link> : <Nav.Link className='text-white' as={Link} to="/login">Login</Nav.Link>
+            }
+
           </Nav>
         </Navbar.Collapse>
       </div>

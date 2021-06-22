@@ -29,7 +29,7 @@ const ComprehensiveFeatures = () => {
                 <div className="features-service-section">
                         <div className="row">
                             {
-                                comprehensiveFeatures.slice(5, 9).map((service, index) => (
+                                comprehensiveFeatures.slice(5, comprehensiveFeatures.length).map((service, index) => (
                                     <div key={index} className="col-md-6">
                                         <div className="features-single-service text-center">
                                             <span>
@@ -37,7 +37,7 @@ const ComprehensiveFeatures = () => {
                                             </span>
                                             <h3>{service.title}</h3>
                                             <p>{service.description}</p>
-                                            <Link className='text-decoration-none' ><strong className='get-btn'> Get Service <BsFillReplyAllFill/></strong></Link> 
+                                            <Link to='/' className='text-decoration-none' ><strong className='get-btn'> Get Service <BsFillReplyAllFill/></strong></Link> 
                                         </div>
                                     </div>
                                 ))

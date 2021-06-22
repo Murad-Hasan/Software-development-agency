@@ -6,7 +6,7 @@ import MainContent from './MainContent/MainContent';
 
 const Dashboard = () => {
     const match = useRouteMatch();
-    const activePath = useHistory().location.pathname.split('/')[2] || 'manage';
+    const activePath = useHistory().location.pathname.split('/')[2] || 'profile';
     const [active, setActive] = useState(activePath);
 
     useEffect(() => {

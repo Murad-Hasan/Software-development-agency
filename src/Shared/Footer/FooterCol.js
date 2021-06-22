@@ -2,7 +2,7 @@ import React from 'react';
 const FooterCol = (props) => {
     return (
         <div className="col-md-3">
-            <h3 className="text-primary ">{props.menuTitle ? props.menuTitle : <h3 className='m-0 font-monospace border-1'>Softonic Solution</h3> }</h3>
+            <div className="text-primary ">{props.menuTitle ? props.menuTitle : <h3 className='m-0 font-monospace border-1'>Softonic Solution</h3> }</div>
             <ul className="list-unstyled mt-4">
                  {
                      props.menuItems.map((item, index) => <li key={index}>
