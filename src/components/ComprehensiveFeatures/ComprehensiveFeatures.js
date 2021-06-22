@@ -25,23 +25,6 @@ const ComprehensiveFeatures = () => {
         <section className='py-4'>
         <Container>
             <Row>
-            <Col md={4} sm={12}>
-                    <div style={{fontFamily: 'Poppins, sans-serif' }}>
-                        <h1 className='fw-bolder' style={{color:'#000'}}>
-                         Comprehensive Features
-                        </h1>
-                        <hr style={{width:'150px', color:'#2A7AF3', border:'1px solid'}}/>
-                        <p style={{color:'grey', textAlign:'justify'}}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe aspernatur adipisci minus assumenda omnis, possimus beatae aliquam explicabo, recusandae veritatis earum repellendus, impedit.</p>
-                        <ul className='list-unstyled'>
-                            <li> <FcCheckmark/> Donec facilisis velit eu est phasellus consequat</li>
-                            <li> <FcCheckmark/>  Donec facilisis velit eu est phasellus consequat</li>
-                            <li> <FcCheckmark/>  Donec facilisis velit eu est phasellus consequat</li>
-                            <li> <FcCheckmark/>  Donec facilisis velit eu est phasellus consequat</li>
-                            <li> <FcCheckmark/>  Donec facilisis velit eu est phasellus consequat</li>
-                        </ul>
-                        <button className='btn btn-success'>Read More</button>
-                    </div>
-                </Col>
                 <Col md={8} sm={12}>
                 <div className="features-service-section">
                         <div className="row">
@@ -61,6 +44,23 @@ const ComprehensiveFeatures = () => {
                             }
                     </div>
                 </div>
+                </Col>
+                <Col md={4} sm={12}>
+                    <div style={{fontFamily: 'Poppins, sans-serif' }}>
+                        <h1 className='fw-bolder' style={{color:'#000'}}>
+                         Comprehensive Features
+                        </h1>
+                        <hr style={{width:'150px', color:'#2A7AF3', border:'1px solid'}}/>
+                        <p style={{color:'grey', textAlign:'justify'}}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe aspernatur adipisci minus assumenda omnis, possimus beatae aliquam explicabo, recusandae veritatis earum repellendus, impedit.</p>
+                        <ul className='list-unstyled'>
+                            <li> <FcCheckmark/> Donec facilisis velit eu est phasellus consequat</li>
+                            <li> <FcCheckmark/>  Donec facilisis velit eu est phasellus consequat</li>
+                            <li> <FcCheckmark/>  Donec facilisis velit eu est phasellus consequat</li>
+                            <li> <FcCheckmark/>  Donec facilisis velit eu est phasellus consequat</li>
+                            <li> <FcCheckmark/>  Donec facilisis velit eu est phasellus consequat</li>
+                        </ul>
+                        <button className='btn btn-success'>Read More</button>
+                    </div>
                 </Col>
             </Row>
         </Container>

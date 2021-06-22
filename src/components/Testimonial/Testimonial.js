@@ -46,7 +46,7 @@ const Testimonial = () => {
               </p>
             </div>
           </Col>
-          <Col md={6} sm={12} className=' offset-2'>
+          <Col md={6} sm={12} className='offset-lg-2'>
             <Swiper
               spaceBetween={30}
               centeredSlides={true}
