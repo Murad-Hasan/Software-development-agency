@@ -23,7 +23,7 @@ const Services = () => {
       },[])
 
     return (
-        <section className='py-5' id='#services'>
+        <section className='py-5'>
             <div className="image">
                             <img height='500px' src="https://i.ibb.co/pvCv1YJ/special-feat.png" alt="" />
                         </div>
