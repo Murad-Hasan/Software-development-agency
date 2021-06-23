@@ -1,14 +1,17 @@
 import React from 'react';
 import { Route, Switch} from 'react-router-dom';
+import MakeAdmin from './MakeAdmin';
+import Order from './Order';
 import ProductAdd from './ProductAdd';
 import ProductEdit from './ProductEdit';
 import ProductManage from './ProductManage';
 import Profile from './Profile';
+import Review from './Review';
 
 const MainContent = ({match}) => {
     
     return (
-        <div className="admin__content">
+        <div className="admin__content" style={{height:'100vh' ,overflowY:'scroll'}}>
                 <Switch>
                     <Route exact path={`${match.path}/`}>
                         <Profile />
@@ -17,10 +20,10 @@ const MainContent = ({match}) => {
                         <Profile />
                     </Route>
                     <Route path={`${match.path}/orders`}>
-                        <ProductManage />
+                        <Order />
                     </Route>
                     <Route path={`${match.path}/review`}>
-                        <ProductManage />
+                        <Review />
                     </Route>
                     <Route path={`${match.path}/orderList`}>
                         <ProductManage />
@@ -29,7 +32,7 @@ const MainContent = ({match}) => {
                         <ProductAdd />
                     </Route>
                     <Route path={`${match.path}/addAdmin`}>
-                        <ProductEdit />
+                        <MakeAdmin />
                     </Route>
                     <Route path={`${match.path}/manageService`}>
                         <ProductEdit />

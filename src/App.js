@@ -36,9 +36,9 @@ function App() {
           <Route path="/services">
             <Services />
           </Route>
-          <Router path="/getService/:serviceId">
+          <Route path="/getService/:serviceId">
             <GetService/>
-          </Router>
+          </Route>
           <Route path="/about">
             <TakaYourBusiness />
           </Route>

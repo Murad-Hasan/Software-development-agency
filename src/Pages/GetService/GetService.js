@@ -1,7 +1,7 @@
 import React, {useContext, useEffect, useState } from 'react';
 import { Col, Container, FormLabel, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import { UserContext } from '../../App';
 // import { useParams } from 'react-router-dom';
 import PaymentMethod from '../../components/Payment/PaymentMethod'
@@ -9,10 +9,17 @@ import PaymentMethod from '../../components/Payment/PaymentMethod'
 
 
 const GetService = () => {
+
+  // const {serviceId} = useParams()
+  // console.log(serviceId);
+ 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+},[]);
   const {pathname} = useLocation()
-  console.log(pathname);
+  // console.log(pathname);
   const id = pathname.split('/')[2].trim()
-  console.log(id);
+  // console.log(id);
   const [processOrderFormData, setProcessOrderFormData] = useState(null)
   const {
         register,
