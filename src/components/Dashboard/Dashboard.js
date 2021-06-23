@@ -11,8 +11,8 @@ const Dashboard = () => {
 
     useEffect(() => {
         setActive(activePath);
+        window.scrollTo(0, 0);
     }, [activePath]);
-
     return (
         <section className="admin">
            <Sidebar active={active} match={match}/>

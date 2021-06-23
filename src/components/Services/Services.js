@@ -21,7 +21,6 @@ const Services = () => {
       useEffect(()=>{
         asyncServicesData();
       },[])
-
     return (
         <section className='py-5'>
             <div className="image">
@@ -43,15 +42,15 @@ const Services = () => {
                     <div className="service-section">
                             <div className="row">
                                 {
-                                    services.slice(0,4).map((service, index) => (
+                                    services.slice(4, services.length).map((service, index) => (
                                         <div key={index} className="col-md-6">
                                             <div className="single-service text-center">
                                                 <span>
-                                                    <img height='80px' src={service.icon} alt="" />
+                                                    <img height='80px' src={service.icon} alt=".." />
                                                 </span>
                                                 <h3>{service.title}</h3>
                                                 <p>{service.description}</p>
-                                                <Link to='/' className='text-decoration-none' ><strong className='get-btn'> Get Service <BsFillReplyAllFill/></strong></Link> 
+                                                <Link to={`/getService/${service._id}`} className='text-decoration-none' ><strong className='get-btn'> Get Service <BsFillReplyAllFill/></strong></Link> 
                                             </div>
                                         </div>
                                     ))

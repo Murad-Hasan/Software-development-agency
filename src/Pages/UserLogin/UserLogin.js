@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import LogIn from "../../components/LogIn/LogIn";
 import SignUp from "../../components/SignUp/SignUp";
@@ -6,7 +6,9 @@ import SocialLogIn from "../../components/SocialLogIn/SocialLogIn";
 import "./UserLogin.css";
 const UserLogIn = () => {
   const [isClick, setIsClick] = useState(false);
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="login-form">
       <div className="form-container">
