@@ -64,7 +64,7 @@ const Testimonial = () => {
                 testimonials.map((Testimonial, index) => (
                   <SwiperSlide key={index}>
                     <Card className='text-center slider-cart'>
-                       <img src={Testimonial.image} alt="testimonial" />
+                       <img src={Testimonial.image || 'https://static.thenounproject.com/png/363640-200.png'} alt="testimonial" />
                        <p>{Testimonial.author}</p>
                        <span>{Testimonial.content}</span>
                     </Card>

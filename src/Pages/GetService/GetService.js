@@ -48,7 +48,8 @@ const GetService = () => {
         let dateFormate=today.getDate() + "-"+ parseInt(today.getMonth()+1) +"-"+today.getFullYear();
          const newOrder = {...service}
          const {title, description, icon} = newOrder;
-          const confirmOrder = {title, icon, description, paymentId, processOrderFormData, status: 'Pending' , date: dateFormate}
+         const {email, displayName} = loggedInUser;
+          const confirmOrder = {title, icon, description, email, displayName, paymentId, processOrderFormData, status: 'Pending' , date: dateFormate}
               fetch('https://server-agency.herokuapp.com/addOrder', {
                 method: 'POST' ,
                 headers: {

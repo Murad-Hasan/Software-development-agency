@@ -7,13 +7,12 @@ const ProductAdd = () => {
     const [imageURL, setImageURL] = useState(null)
     const onSubmit = (data) => {
         const eventData = {
-            name: data.name,
-            catagory: data.category,
-            price: data.price,
-            image: imageURL
+            title: data.title,
+            description: data.description,
+            icon: imageURL
         }
   
-   const url = `https://quick-e-shop.herokuapp.com/addProduct`
+   const url = `https://server-agency.herokuapp.com/addService`
         fetch(url, {
             method: 'POST' ,
             headers: {
@@ -47,12 +46,10 @@ const ProductAdd = () => {
             </div>
            <div className="w-75 m-auto">
            <form onSubmit={handleSubmit(onSubmit)}>
-                <input className="form-control mb-2"  placeholder='Input name' {...register("name", { required: true })} />
-                {errors.name && <span>This field is required</span>}
-                <input className="form-control  mb-2"  placeholder='Input category' {...register("category", { required: true })} />
-                {errors.category && <span>This field is required</span>}
-                <input className="form-control  mb-2" placeholder='Input price' type="number" {...register("price", { required: true })} />
-                {errors.price && <span>This field is required</span>}
+                <input className="form-control mb-2"  placeholder='Input Title' {...register("title", { required: true })} />
+                {errors.title && <span>This field is required</span>}
+                <input className="form-control  mb-2"  placeholder='Input Description' {...register("description", { required: true })} />
+                {errors.description && <span>This field is required</span>}
                <input   className="form-control  mb-2" onChange={handleImageUpload} type="file"/>
                <input className="form-control btn btn-outline-success" type="submit"  value='Add Product'/>
             </form>

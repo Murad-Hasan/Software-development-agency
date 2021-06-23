@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BookingCard = ({singleOrder}) => {
+const OrderCard = ({singleOrder}) => {
     const {title, description, icon, status} = singleOrder;
     return (
         <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12 border border-1 p-3">
@@ -19,4 +19,4 @@ const BookingCard = ({singleOrder}) => {
     );
 };
 
-export default BookingCard;
+export default OrderCard;

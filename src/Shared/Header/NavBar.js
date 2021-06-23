@@ -9,7 +9,7 @@ const NavBar = () => {
   return (
     <Navbar sticky="top" collapseOnSelect expand="md" style={{background:'rgba(117, 174, 255,.9)'}} className='shadow p-3 rounded'>
       <div className="container">
-        <Navbar.Brand href="/">
+        <Navbar.Brand as={Link} to ='/'>
           <h2 className='m-0 font-monospace border-1'>Softonic Solution</h2>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />

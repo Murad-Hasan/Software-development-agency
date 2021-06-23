@@ -12,7 +12,7 @@ const Profile = () => {
             <div id="profile-main-card">
               <div className="profile-cover-photo"></div>
               <div className="profile-photo">
-                <img src={loggedInUser.photoURL} alt="" />
+                <img src={loggedInUser.photoURL || 'https://static.thenounproject.com/png/363640-200.png'} alt="" />
               </div>
               <div className="profile-content">
                 <h4 className="profile-name text-center">
