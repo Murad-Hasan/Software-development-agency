@@ -36,14 +36,11 @@ function App() {
           <Route path="/services">
             <Services />
           </Route>
-          <Route path="/getService/:serviceId">
+          <PrivateRouter path="/getService/:serviceId">
             <GetService/>
-          </Route>
+          </PrivateRouter>
           <Route path="/about">
             <TakaYourBusiness />
-          </Route>
-          <Route path="/contact">
-            <UserLogIn />
           </Route>
           <PrivateRouter path="/dashboard">
             <Dashboard />
